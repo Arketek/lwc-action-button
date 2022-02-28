@@ -8,10 +8,10 @@ export default class FlowController extends QuickActionController
         super();
     }
     
-    execute(config)
+    execute(args)
     {
         super.execute();
 
-        invokeFlow({ args: JSON.stringify(this.config) });
+        invokeFlow({ args: JSON.stringify(this.args) });
     }
 }

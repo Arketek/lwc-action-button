@@ -13,8 +13,7 @@ export default class QuickActionController extends LightningElement
         this.isExecuting = false;
     }
 
-    @api 
-    async invoke()
+    @api async invoke()
     {
         console.log('Button Pressed');
 

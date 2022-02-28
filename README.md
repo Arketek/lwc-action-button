@@ -6,7 +6,7 @@ Create a new Lightning Web Component that inherits from the `quickActionFlowCont
 Use the `args` variable to set which flow to run.
 
 ## LWC Example
-###  aRandomClassName.js
+### Javascript file
 ```JavaScript
 import QuickActionFlowController from 'c/quickActionFlowController';
 
@@ -35,7 +35,7 @@ export default class ARandomClassName extends QuickActionFlowController
 }
 ```
 
-### .js-meta.XML
+### XML file
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
@@ -54,7 +54,7 @@ export default class ARandomClassName extends QuickActionFlowController
 </LightningComponentBundle>
 ```
 
-###  aRandomClassName.html
+### HTML file
 ```HTML
 <template>
 </template>

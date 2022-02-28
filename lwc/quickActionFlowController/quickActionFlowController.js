@@ -1,7 +1,7 @@
 import QuickActionController from 'c/quickActionController';
 import invokeFlow from '@salesforce/apex/FlowController.invokeFlow';
 
-export default class FlowController extends QuickActionController 
+export default class QuickActionFlowController extends QuickActionController 
 {
     constructor()
     {

@@ -1,12 +1,16 @@
 # lwc-action-button
-Easily create Quick Action buttons for Lightning Web Components.
+Easily create Quick Action buttons and trigger flows for Lightning Web Components.
 
-# How to use
-Create a new Lightning Web Component that inherits from the `quickActionFlowController.js` class
+# How to Use
+Create a new Lightning Web Component that inherits from the `quickActionFlowController.js` class.
+Use the `args` variable to set which flow to run.
+
+## LWC Example
+###  aRandomClassName.js
 ```JavaScript
-import FlowController from 'c/quickActionFlowController';
+import QuickActionFlowController from 'c/quickActionFlowController';
 
-export default class ARandomClassName extends FlowController 
+export default class ARandomClassName extends QuickActionFlowController 
 {
     args =  
     {
@@ -29,6 +33,31 @@ export default class ARandomClassName extends FlowController
         super.execute(this.args);
     }
 }
+```
+
+### .js-meta.XML
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+
+    <targets>
+        <target>lightning__RecordAction</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordAction">
+            <actionType>Action</actionType>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
+```
+
+###  aRandomClassName.html
+```HTML
+<template>
+</template>
 ```
 
 # sfdx-module-template
